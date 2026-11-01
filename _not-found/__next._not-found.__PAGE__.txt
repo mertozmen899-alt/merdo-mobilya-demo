@@ -1,0 +1,36 @@
+1:"$Sreact.fragment"
+2:"/merdo-mobilya-demo/_next/static/chunks/3-ws--3vnntyi.js"
+3:"/merdo-mobilya-demo/_next/static/chunks/2sn-cguwhvybj.js"
+4:I[42618,["$2","$3"],"default"]
+5:I[3374,["$2","$3"],"default"]
+6:I[43484,["$2","$3"],"default"]
+7:I[29519,["$2","$3"],"default"]
+8:I[85551,["$2","$3"],"default"]
+9:I[39756,["$2","$3"],"default"]
+a:I[37457,["$2","$3"],"default"]
+b:I[22016,["$2","$3"],""]
+c:I[58234,["$2","$3"],"default"]
+13:I[97367,["$2","$3"],"OutletBoundary"]
+14:"$Sreact.suspense"
+17:"ViewportBoundary"
+18:I[97367,["$2","$3"],"$17"]
+19:"MetadataBoundary"
+1a:I[97367,["$2","$3"],"$19"]
+1b:I[27201,["$2","$3"],"IconMark"]
+:HL["/merdo-mobilya-demo/_next/static/chunks/2gxw7j551q_a1.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap","style"]
+e:X
+11:X
+11:C
+12:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"flex min-h-[70vh] flex-col items-center justify-center px-5 pt-[calc(var(--topbar-h)+var(--header-h))] text-center","children":[["$","p",null,{"className":"text-[11px] uppercase tracking-[0.22em] text-mute","children":"404"}],["$","h1",null,{"className":"mt-3 text-[40px] font-light lowercase","children":"sayfa bulunamadı"}],["$","$Lb",null,{"href":"/","className":"mt-8 border border-ink px-8 py-3.5 text-[12px] uppercase tracking-[0.16em]","children":"Ana sayfaya dön"}]]}],null,["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]]}],"p":"$@16","v":null,"s":"$e"}}]]
+f:[["children",{"s":"/_not-found","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L9",null,{"parallelRouterKey":"children","template":["$","$La",null,{}]}]]}],"p":"$@10","v":"$11","s":"$e"},"c":"$Q12"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/merdo-mobilya-demo/_next/static/chunks/2gxw7j551q_a1.css","precedence":"next"}],["$","script","script-0",{"src":"/merdo-mobilya-demo/_next/static/chunks/3-ws--3vnntyi.js","async":true}],["$","script","script-1",{"src":"/merdo-mobilya-demo/_next/static/chunks/2sn-cguwhvybj.js","async":true}]],["$","html",null,{"lang":"tr","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://images.unsplash.com"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap","rel":"stylesheet"}]]}],["$","body",null,{"children":[["$","a",null,{"href":"#icerik","className":"sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-paper focus:px-4 focus:py-2","children":"İçeriğe geç"}],["$","$L4",null,{}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{}],["$","main",null,{"id":"icerik","children":["$","$L9",null,{"parallelRouterKey":"children","template":["$","$La",null,{}],"notFound":[["$","div",null,{"className":"flex min-h-[70vh] flex-col items-center justify-center px-5 pt-[calc(var(--topbar-h)+var(--header-h))] text-center","children":[["$","p",null,{"className":"text-[11px] uppercase tracking-[0.22em] text-mute","children":"404"}],["$","h1",null,{"className":"mt-3 text-[40px] font-light lowercase","children":"sayfa bulunamadı"}],["$","$Lb",null,{"href":"/","className":"mt-8 border border-ink px-8 py-3.5 text-[12px] uppercase tracking-[0.16em]","children":"Ana sayfaya dön"}]]}],[]]}]}],["$","$Lc",null,{}],["$","a",null,{"href":"https://wa.me/900000000000","target":"_blank","rel":"noreferrer","aria-label":"WhatsApp ile yazın","className":"fixed bottom-5 right-5 z-50 flex h-13 w-13 items-center justify-center rounded-full bg-[#25d366] shadow-lg transition-transform hover:scale-105","style":{"width":52,"height":52},"children":["$","svg",null,{"viewBox":"0 0 24 24","width":"26","height":"26","fill":"#fff","aria-hidden":true,"children":["$","path",null,{"d":"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.2z"}]}]}]]}]]}]]}],"p":"$@d","v":null,"s":"$e"},"c":"$Qf"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L18",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#ffffff"}]]}],["$","$L1a",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$14",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Merdo | Çağdaş Mobilya Çorum"}],["$","meta","1",{"name":"description","content":"Merdo: kanepe, koltuk, yemek masası, yatak ve aydınlatma. Çorum showroom, ücretsiz dekorasyon danışmanlığı."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","link","3",{"rel":"icon","href":"/merdo-mobilya-demo/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L1b","4",{}]]}]}],null]}],null]}],"p":"$@1c","v":null,"s":"$e"}},"a":"$@1d","u":"$@1e","b":"pzX7QNimxQiyDwlF3FWTV"}
+15:null
+e:300
+1e:true
+e:C
+1d:0
+10:"$undefined"
+d:"$undefined"
+1c:"$undefined"
+16:"$undefined"
