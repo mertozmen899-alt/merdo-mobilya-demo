@@ -78,14 +78,10 @@ export interface Designer {
 
 export interface HeroSlide {
   id: string;
-  kind: "kampanya" | "urun" | "marka" | "3d";
+  kind: "kampanya" | "urun" | "marka";
   image: string;
   /** Mixkit video kimliği (ücretsiz Mixkit lisansı). Varsa görsel yerine video oynar. */
   video?: string;
-  /** 3D vitrin model kimliği (data/showcase.ts) */
-  model?: string;
-  /** Bu slaytın ekranda kalma süresi (ms) */
-  duration?: number;
   imageMobilePosition?: string;
   eyebrow?: string;
   title: string;

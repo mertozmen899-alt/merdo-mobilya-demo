@@ -21,8 +21,6 @@ export const site = {
 
 /* ---------- Ana sayfa slider ---------- */
 export const heroSlides: HeroSlide[] = [
-  { id: "hisar-3d", kind: "3d", model: "modern_arm_chair_01", image: "1601366533287-5ee4c763ae4e", duration: 14000, eyebrow: "360° · Yeni sezon",
-    title: "hisar", subtitle: "Masif meşe çerçeve, el dikişli deri. Her açıdan kusursuz.", cta: "Koltukları keşfet", href: "/urunler/koltuklar/" },
   { id: "kampanya", kind: "kampanya", image: "1758448511322-8bfc73daf606", video: "4196", eyebrow: "1 - 30 Kasım",
     title: "özel günler", subtitle: "Seçili kanepe, masa ve yataklarda %15'e varan indirim", cta: "Fırsatları keşfet", href: "/urunler/?rozet=ozel-gunler" },
   { id: "marka", kind: "marka", image: "1758565811176-ccd94357a844", video: "4488", eyebrow: "Yeni sezon 2026",

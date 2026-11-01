@@ -1,7 +1,6 @@
 import Link from "next/link";
 import HeroSlider from "@/components/home/HeroSlider";
 import PromoTiles from "@/components/home/PromoTiles";
-import Showcase360 from "@/components/home/Showcase360";
 import Carousel from "@/components/ui/Carousel";
 import MagCard from "@/components/home/MagCard";
 import { articles, site } from "@/data/content";
@@ -11,7 +10,6 @@ export default function HomePage() {
     <>
       <h1 className="sr-only">{site.brand}: {site.city}&apos;da çağdaş mobilya</h1>
       <HeroSlider />
-      <Showcase360 />
       <PromoTiles />
 
       <div className="mt-24">

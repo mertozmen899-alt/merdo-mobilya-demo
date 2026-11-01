@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { heroSlides } from "@/data/content";
@@ -10,8 +9,6 @@ import { badgeLabel, cx, formatPrice } from "@/lib/utils";
 import type { HeroSlide } from "@/types";
 
 const DURATION = 7000;
-// 3D motoru yalnızca tarayıcıda ve gerektiğinde yüklenir
-const Turntable = dynamic(() => import("@/components/three/Turntable"), { ssr: false });
 const mixkit = (id: string) => ({
   src: `https://assets.mixkit.co/videos/${id}/${id}-720.mp4`,
   poster: `https://assets.mixkit.co/videos/${id}/${id}-thumb-720-0.jpg`,
@@ -31,7 +28,6 @@ export default function HeroSlider() {
   const touch = useRef<number | null>(null);
   const n = heroSlides.length;
   const running = playing && visible;
-  const dur = heroSlides[index].duration ?? DURATION;
 
   const go = useCallback((i: number) => { setIndex((i + n) % n); setCycle((c) => c + 1); }, [n]);
 
@@ -43,9 +39,9 @@ export default function HeroSlider() {
 
   useEffect(() => {
     if (!running) return;
-    const t = setTimeout(() => go(index + 1), dur);
+    const t = setTimeout(() => go(index + 1), DURATION);
     return () => clearTimeout(t);
-  }, [running, index, cycle, go, dur]);
+  }, [running, index, cycle, go]);
 
   return (
     <section
@@ -74,7 +70,7 @@ export default function HeroSlider() {
               <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-paper/35" />
               <span key={i === index ? `${cycle}-${running}` : undefined}
                 className="absolute inset-x-0 top-1/2 h-px origin-left -translate-y-1/2 bg-paper"
-                style={i === index ? (running ? { animation: `progress ${dur}ms linear forwards` } : { transform: "scaleX(1)" }) : { transform: i < index ? "scaleX(1)" : "scaleX(0)", opacity: i < index ? 0.6 : 1 }} />
+                style={i === index ? (running ? { animation: `progress ${DURATION}ms linear forwards` } : { transform: "scaleX(1)" }) : { transform: i < index ? "scaleX(1)" : "scaleX(0)", opacity: i < index ? 0.6 : 1 }} />
             </button>
           ))}
         </div>
@@ -94,17 +90,6 @@ function Slide({ s, active, near, running, cycle, label, first }: { s: HeroSlide
   const video = useRef<HTMLVideoElement>(null);
   const [videoFailed, setVideoFailed] = useState(false);
 
-  // Video kaynağı yüklenemezse fotoğrafa geri dön (React <source> hatasını her zaman yakalamaz)
-  useEffect(() => {
-    const v = video.current;
-    const src = v?.querySelector("source");
-    if (!v || !src) return;
-    const fail = () => setVideoFailed(true);
-    src.addEventListener("error", fail);
-    if (v.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) fail();
-    return () => src.removeEventListener("error", fail);
-  });
-
   // Video yalnızca aktif slaytta ve oynatma açıkken oynar
   useEffect(() => {
     const v = video.current;
@@ -117,20 +102,11 @@ function Slide({ s, active, near, running, cycle, label, first }: { s: HeroSlide
 
   const showVideo = !!s.video && !videoFailed;
   const m = s.video ? mixkit(s.video) : null;
-  const [threeFailed, setThreeFailed] = useState(false);
-  const show3d = s.kind === "3d" && !!s.model && !threeFailed;
 
   return (
     <div role="group" aria-roledescription="slide" aria-label={label} aria-hidden={!active}
       className={cx("absolute inset-0 transition-opacity duration-[1200ms] ease-lux", active ? "z-10 opacity-100" : "z-0 opacity-0")}>
-      {near && show3d ? (
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 60% at 68% 62%, #6b5646 0%, #3a2d24 48%, #1d1713 100%)" }}>
-          <div className="absolute inset-x-0 top-[6%] h-[64%] lg:inset-y-0 lg:left-auto lg:right-0 lg:top-0 lg:h-full lg:w-[64%]">
-            <Turntable modelId={s.model!} active={active} tone="dark" onState={(st) => st === "error" && setThreeFailed(true)} />
-          </div>
-          <p className="absolute right-6 top-[calc(var(--topbar-h)+var(--header-h)+12px)] text-[10px] uppercase tracking-[0.2em] text-paper/50 sm:right-10 lg:right-16">Temsilî 3D model</p>
-        </div>
-      ) : near && (showVideo && m ? (
+      {near && (showVideo && m ? (
         <video ref={video} muted loop playsInline preload={first ? "auto" : "metadata"} poster={m.poster} autoPlay={first}
           onError={() => setVideoFailed(true)} aria-hidden
           className="absolute inset-0 h-full w-full object-cover">
