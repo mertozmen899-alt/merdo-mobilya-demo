@@ -54,6 +54,10 @@ body {
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease-lux), transform .9s var(--ease-lux); }
 .reveal.is-in { opacity: 1; transform: none; }
 
+/* Hero: görsellerde yavaş yakınlaşma (video hissi) */
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.12); } }
+.kenburns { animation: kenburns 9s ease-out forwards; transform-origin: 60% 50%; }
+
 /* Hero ilerleme çubuğu */
 @keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 

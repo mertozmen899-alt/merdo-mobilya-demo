@@ -21,8 +21,10 @@ export const site = {
 
 /* ---------- Ana sayfa slider ---------- */
 export const heroSlides: HeroSlide[] = [
-  { id: "kampanya", kind: "kampanya", image: "1758448511322-8bfc73daf606", eyebrow: "1 - 30 Kasım",
+  { id: "kampanya", kind: "kampanya", image: "1758448511322-8bfc73daf606", video: "4196", eyebrow: "1 - 30 Kasım",
     title: "özel günler", subtitle: "Seçili kanepe, masa ve yataklarda %15'e varan indirim", cta: "Fırsatları keşfet", href: "/urunler/?rozet=ozel-gunler" },
+  { id: "marka", kind: "marka", image: "1758565811176-ccd94357a844", video: "4488", eyebrow: "Yeni sezon 2026",
+    title: "evin ortasında", subtitle: "Sade çizgiler, doğal dokular, yıllarca yaşanacak parçalar.", cta: "Koleksiyonu keşfet", href: "/urunler/" },
   { id: "lina", kind: "urun", productSlug: "lina-buyuk-3lu-kanepe", image: "1583847268964-b28dc8f51f92",
     title: "lina", cta: "daha fazla", href: "/urun/lina-buyuk-3lu-kanepe/" },
   { id: "ada", kind: "urun", productSlug: "ada-yemek-masasi", image: "1604578762246-41134e37f9cc",
@@ -31,7 +33,7 @@ export const heroSlides: HeroSlide[] = [
     title: "mira", cta: "daha fazla", href: "/urun/mira-berjer/" },
   { id: "selin", kind: "urun", productSlug: "selin-baslikli-yatak", image: "1770941633927-b7a15557e0e1",
     title: "selin", cta: "daha fazla", href: "/urun/selin-baslikli-yatak/" },
-  { id: "ova", kind: "urun", productSlug: "ova-kose-kanepe", image: "1758565811176-ccd94357a844",
+  { id: "ova", kind: "urun", productSlug: "ova-kose-kanepe", image: "1758565811176-ccd94357a844", video: "4029",
     title: "ova", cta: "daha fazla", href: "/urun/ova-kose-kanepe/" },
 ];
 

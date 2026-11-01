@@ -78,8 +78,10 @@ export interface Designer {
 
 export interface HeroSlide {
   id: string;
-  kind: "kampanya" | "urun";
+  kind: "kampanya" | "urun" | "marka";
   image: string;
+  /** Mixkit video kimliği (ücretsiz Mixkit lisansı). Varsa görsel yerine video oynar. */
+  video?: string;
   imageMobilePosition?: string;
   eyebrow?: string;
   title: string;
