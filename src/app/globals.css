@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/*
+  Tasarım sistemi
+  Referans karakteri: beyaz zemin, siyah metin, ince geometrik yazı, küçük harfli ürün adları,
+  geniş görseller ve az renk. Değerler referanstan doğrudan ölçülemedi (bkz. rapor),
+  bu yüzden aynı karakteri koruyan tutarlı bir ölçek kullanıldı.
+*/
+@theme {
+  --font-sans: "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+
+  --color-ink: #111111;
+  --color-ink-soft: #3c3c3c;
+  --color-mute: #6f6f6f;
+  --color-line: #e3e1dc;
+  --color-paper: #ffffff;
+  --color-sand: #f4f2ee;
+  --color-stone: #e9e6e0;
+  --color-promo: #b4252f;
+  --color-discover: #2f6b4f;
+
+  --ease-lux: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+:root {
+  --header-h: 72px;
+  --topbar-h: 34px;
+}
+@media (min-width: 1024px) {
+  :root { --header-h: 84px; }
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Erişilebilir odak çizgisi */
+:focus-visible { outline: 1px solid currentColor; outline-offset: 3px; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Altı çizgili link efekti */
+.link-line { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .35s var(--ease-lux); }
+.link-line:hover, .link-line.is-on { background-size: 100% 1px; }
+
+/* Kaydırınca belirme */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease-lux), transform .9s var(--ease-lux); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* Hero ilerleme çubuğu */
+@keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
