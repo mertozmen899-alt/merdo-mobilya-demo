@@ -90,6 +90,17 @@ function Slide({ s, active, near, running, cycle, label, first }: { s: HeroSlide
   const video = useRef<HTMLVideoElement>(null);
   const [videoFailed, setVideoFailed] = useState(false);
 
+  // Video kaynağı yüklenemezse fotoğrafa geri dön (React <source> hatasını her zaman yakalamaz)
+  useEffect(() => {
+    const v = video.current;
+    const src = v?.querySelector("source");
+    if (!v || !src) return;
+    const fail = () => setVideoFailed(true);
+    src.addEventListener("error", fail);
+    if (v.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) fail();
+    return () => src.removeEventListener("error", fail);
+  });
+
   // Video yalnızca aktif slaytta ve oynatma açıkken oynar
   useEffect(() => {
     const v = video.current;
