@@ -1,6 +1,6 @@
-:HL["/merdo-mobilya-demo/_next/static/chunks/2gxw7j551q_a1.css","style"]
+:HL["/merdo-mobilya-demo/_next/static/chunks/2nv6cgz3j1kyz.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"hisar-acilir-masa","s":[]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"urun","h":131168,"c":"$Q2"}]]
-0:{"b":"pzX7QNimxQiyDwlF3FWTV","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
+0:{"b":"regf5FxdWaxX0XP9yVqEr","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
